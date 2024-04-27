@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    /* Fonts */
+    --title: 'Karla', 'serif';
+    --main-font: 'Quicksand', 'serif';
+
+    /* Colors */
+    --background: #f5f5f5;
+    --grey: #fbfbfb;
+    --black: #373737;
+    --light-blue: #9FE7F5;
+    --blue: #429EBD;
+    --dark-blue: #053F5C;
+    --yellow: #F7AD19;
+    --orange: #F27F0C;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+}
+
+/* Header */
+a .logo {
+    width: 6rem;
+    height: auto;
+}
+
+/* Main */
+main {
+    flex: 1 0 auto;
+    background-color: var(--background);
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons, .footer-text {
+    height: 1rem;
+    margin: .5rem;
+}
+
+.hide {
+    display: none;
+}
+
+footer a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--black);
+}
+
+@media screen and (min-width: 767px) {
+
+    .hide {
+        display: flex;
+    }
+
+    .social-icons, .footer-text {
+        height: 1.5rem;
+        margin: .8rem;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    footer {
+        height: 6rem;
+        padding: .8rem;
+    }
+
+    .social-icons, .footer-text {
+        height: 2.5rem;
+        margin: 1rem;
+    }
+    
+}
