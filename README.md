@@ -1,9 +1,12 @@
 ## About BrainOn
 
 
-## Release History
+## Debugging
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Debugging deployment
+Forgot to add env.py file and import it
+
+
 
 **September 20 2023:** Update Python version to 3.9.17.
 
