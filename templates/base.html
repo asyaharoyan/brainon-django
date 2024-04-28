@@ -37,7 +37,7 @@
                   </li>
                   <!--Trying another view -->
                   <li class="nav-item">
-                    <a class="nav-link {% if request.path == courses_url %}active{% endif %}" href="#">Online Lessons</a>
+                    <a class="nav-link {% if request.path == courses_url %}active{% endif %}" href="{% url 'courses' %}">Online Lessons</a>
                   </li>
                   {% if user.is_authenticated %}
                     <li class="nav-item">
