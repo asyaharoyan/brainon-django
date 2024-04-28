@@ -38,6 +38,33 @@ main {
     background-color: var(--background);
 }
 
+.about-img {
+    width: 100%;
+    align-items: center;
+}
+
+.signin-btn {
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+}
+
+.signin-btn:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 800;
+}
+
+.post-images {
+    width: 30%;
+    height: auto;
+}
+
 /* Footer */
 footer {
     flex-shrink: 0;
