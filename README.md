@@ -5,6 +5,7 @@
 
 Debugging deployment
 Forgot to add env.py file and import it
+fixed font size to be sure that in every size of screen the footer will be one line
 
 
 

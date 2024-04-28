@@ -1,6 +1,9 @@
 {% load static %}
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +39,20 @@
                   <li class="nav-item">
                     <a class="nav-link {% if request.path == courses_url %}active{% endif %}" href="#">Online Lessons</a>
                   </li>
-
+                  {% if user.is_authenticated %}
+                    <li class="nav-item">
+	                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" 
+                                                                            href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                  {% else %}
+                    <li class="nav-item">
+	                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+		                                                                          href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                  <li class="nav-item">
+	                  <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                  </li>
+                  {% endif %}
                   
                 </ul>
               </div>
@@ -54,17 +70,17 @@
     
     <!-- Footer -->
     <footer>
-        <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="Linked - Openes in a new">
+        <a href="{% url 'home' %}" target="_blank" rel="noopener noreferrer" aria-label="Linked - Openes in a new">
             <p class="footer-text hide">BrainOn</p></a>
         <p class="footer-text hide">Copyright 2024 by Asya Haroyan</p>
         <p class="footer-text">Find Us:</p>
-        <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="Linked - Openes in a new" class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Linked - Openes in a new" class="social-icons">
            <i class="fa-brands fa-square-facebook"></i></a>
-        <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="Linked - Openes in a new" class="social-icons">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Linked - Openes in a new" class="social-icons">
              <i class="fa-brands fa-square-instagram"></i></a>
-         <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="Linked - Openes in a new" class="social-icons">
+         <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Linked - Openes in a new" class="social-icons">
         <i class="fa-brands fa-square-youtube"></i></a>
-         <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="Linked - Openes in a new" class="social-icons">
+         <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Linked - Openes in a new" class="social-icons">
             <i class="fa-brands fa-linkedin"></i></a>
     </footer>
 
