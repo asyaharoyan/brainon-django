@@ -61,7 +61,7 @@
             </span> wrote:
           </p>
           <div class="p-2 comments {% if not comment.approved and comment.commenter == user %}
-          faded{% elif not comment.approved %} d-none{% endif %}" id="comment{{ comment.id }}">
+          faded {% elif not comment.approved %} d-none {% endif %}" id="comment {{ comment.id }}">
             {{ comment.body | linebreaks }}
           </div>
           {% if not comment.approved and comment.commenter == user %}
