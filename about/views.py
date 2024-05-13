@@ -4,7 +4,7 @@ from .models import About
 # Create your views here.
 def about(request):
     """
-    Renders the About page
+    Renders the About page and the collaboration form
     """
     about = About.objects.all().order_by('-updated_on').first()
 
