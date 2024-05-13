@@ -2,6 +2,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 
+
 STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
@@ -47,3 +48,18 @@ class Lesson(models.Model):
     def __str__(self):
         return f"{self.title} - {self.course}"
 
+
+class Comment(models.Model):
+    course = models.ForeignKey(
+        Lesson, on_delete=models.CASCADE, related_name='comments')
+    commenter = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='commenter')
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment written by {self.commenter} - {self.body}"
