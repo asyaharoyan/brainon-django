@@ -9,6 +9,16 @@ from .forms import CommentForm
 # Create your views here.
 
 class LessonList(ListView):
+    """
+    Renders all the lessons published by admin
+    **Context**
+    queryset
+      All published instances of :model:class.Lesson
+    paginate_by
+      Number of posts per page
+    **Templates**
+    :templates:courses/online_courses.html
+    """
     queryset = Lesson.objects.filter(status=1)
     template_name = 'courses/online_courses.html'
     context_object_name = 'lessons'
@@ -17,16 +27,13 @@ class LessonList(ListView):
 
 def course_detail(request, slug):
     """
-    Display an individual :model:`course.Lesson`.
+    Display an individual :model:course.Lesson.
 
     **Context**
-
-    ``Lesson``
-        An instance of :model:`course.Lesson`.
-
+    Lesson
+        An instance of :model:course.Lesson.
     **Template:**
-
-    :template:`courses/course_detail.html`
+    :template:courses/course_detail.html
     """
 
     queryset = Lesson.objects.filter(status=1)
@@ -61,7 +68,7 @@ def course_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    View to edit comments
     """
     if request.method == "POST":
 

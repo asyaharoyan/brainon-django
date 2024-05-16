@@ -65,6 +65,10 @@ main {
     height: auto;
 }
 
+.faded {
+    color: gray;
+}
+
 /* Footer */
 footer {
     flex-shrink: 0;
