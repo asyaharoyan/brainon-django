@@ -8,6 +8,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 # Create your models here.
 
 class Course(models.Model):
+    """
+    Stores a teacher information registered by admin.
+    """
 
     PHYSICS = 'Physics'
     CHEMISTRY = 'Chemistry'
@@ -33,6 +36,9 @@ class Course(models.Model):
 
 
 class Lesson(models.Model):
+    """
+    Stores a online lesson registered by admin
+    """
     
     title = models.CharField(max_length=100, unique=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
@@ -50,6 +56,9 @@ class Lesson(models.Model):
 
 
 class Comment(models.Model):
+    """
+    Stores a comment written by auth user
+    """
     course = models.ForeignKey(
         Lesson, on_delete=models.CASCADE, related_name='comments')
     commenter = models.ForeignKey(

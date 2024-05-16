@@ -58,3 +58,25 @@ def course_detail(request, slug):
             "comment_form": comment_form,
             },
     )
+
+def comment_edit(request, slug, comment_id):
+    """
+    view to edit comments
+    """
+    if request.method == "POST":
+
+        queryset = Lesson.objects.filter(status=1)
+        lesson = get_object_or_404(queryset, slug=slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.commenter == request.user:
+            comment = comment_form.save(commit=False)
+            comment.lesson = lesson
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('course_detail', args=[slug]))

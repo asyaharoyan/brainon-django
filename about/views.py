@@ -7,6 +7,13 @@ from .forms import CollaborateForm
 def about(request):
     """
     Renders the About page
+    **Context
+    ``about``
+    the instance of model:about.About
+    ``collaborate_form``
+    the instance of :form:about.CollaborateForm
+    ``HTML template``
+    templates:about/about.html
     """
     if request.method == "POST":
         collaborate_form = CollaborateForm(data=request.POST)

@@ -70,7 +70,7 @@
           </p>
           {% endif %}
           {% if user.is_authenticated and comment.commenter == user %}
-          <button class="btn signin-btn"
+          <button class="btn signin-btn btn-edit"
             comment_id="{{ comment.id }}">Edit</button>
             <button class="btn btn-delete"
             comment_id="{{ comment.id }}">Delete</button>
@@ -102,4 +102,6 @@
     </div>
 {% endblock content %}
 
-
+{% block extras %}
+<script src="{% static 'js/comments.js' %}"></script>
+{% endblock %}
