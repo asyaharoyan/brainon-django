@@ -65,6 +65,19 @@ main {
     height: auto;
 }
 
+.comment-date {
+    font-size: .8rem;
+}
+
+.comments {
+    font-size: 1rem;
+}
+
+.approval {
+    font-size: .8rem;
+    font-style: italic;
+}
+
 .faded {
     color: gray;
 }
