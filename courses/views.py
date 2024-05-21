@@ -91,12 +91,6 @@ def comment_edit(request, slug, comment_id):
 def comment_delete(request, slug, comment_id):
     """
     Delete an individual comment.
-
-    **Context**
-    ``post``
-      An instance of :model:`blog.Post`
-    ``comment``
-      A single comment related to the post
     """
     queryset = Lesson.objects.filter(status=1)
     lesson = get_object_or_404(queryset, slug=slug)

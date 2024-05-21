@@ -33,6 +33,7 @@ The logo has been designed by me, using CorelDraw.
 - Have one shorter video lesson for everyone who has not signed up yet to attract more users
 - Provide actual videos instead of pictures
 
+
 ## Debugging
 
 Debugging deployment

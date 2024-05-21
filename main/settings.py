@@ -34,7 +34,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = [
-    '8000-asyaharoyan-brainondjan-tjxpxcxtanx.ws-eu111.gitpod.io',
+    '8000-asyaharoyan-brainondjan-tjxpxcxtanx.ws-eu114.gitpod.io',
     '.herokuapp.com'
 ]
 
