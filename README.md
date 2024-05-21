@@ -1,5 +1,5 @@
 ## BrainON
-picture
+![Responcive BrainON](static/media/brainon-responcive.png)
 
 ## About BrainOn
 BrainOn is an innovative online learning portal designed to connect teachers and students through engaging video content.
