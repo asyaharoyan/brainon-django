@@ -54,6 +54,10 @@ main {
     border-color: var(--dark-blue);
 }
 
+.btn-primary {
+    margin: 1rem;
+}
+
 .link {
     text-decoration: none;
     color: var(--black);
