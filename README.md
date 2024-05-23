@@ -162,10 +162,48 @@ Admin can approve or delete the comments which are not appropriate.
 
 ## Debugging
 
-Debugging deployment
-Forgot to add env.py file and import it
+- Error has been shown while deploying the project.
+- Added env.py file to fix it.
 
-add cloudinary link to be able to upload pics from admin panel
+- Error has been shown when uploading the pictures from admin panel.
+- The error has been fixed b adding cloudinary link.
 
-## Testing
-fixed font size to be sure that in every size of screen the footer will be one line
+- Edit and delete buttons did not work properly.
+- Fixed the bug by console logging. The ID of the comment was not beeing taken. Fixed the error.
+
+### Unfixed Errors
+
+- Uncought(in promise) Error
+
+![Error](static/media/bug.png)
+
+- Mixed content
+
+![Error](static/media/bug-1.png)
+
+## Manual Testing
+
+The web-site has been tested on Google Chrome, Mozilla, Google Egde on both bigger screens and mobile phone.
+The content is loading on all webbrowsers.
+Several manual tests has been done on both computer and mobile devices. 
+
+- All the social media links are opening in a new tab
+- All the buttons are reacting as it is expected
+- It is possible to send a collaboration request
+- It is possible to register a new account on both mobile devices and computers
+- It is possible to log in
+- Edit comment/Delete comment buttons are working as expected
+- All the menu buttons are leading to the pages as expected
+- Not authorized user can not see online lessons as expected
+- Logged in user sees different buttons accordingly
+- Logged in user can leave a comment
+- One user can not edit och delete another ones comment
+- Users can not see unapproved comments except for their own
+- Admin gets collaborations requests as expected
+- Admin can approve or delete comments
+- Admin can create and delete a teacher profile
+- By deleting a lesson, the comment deletes with the lesson
+- By deleting a teacher all the lessons are being deleted
+- Log in and register pages check for valid passwords
+- User can not send a collaboration request without name or email or text
+- Users can not leave a empty comment
