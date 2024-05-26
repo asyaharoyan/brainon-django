@@ -197,13 +197,43 @@ Several manual tests has been done on both computer and mobile devices.
 - Not authorized user can not see online lessons as expected
 - Logged in user sees different buttons accordingly
 - Logged in user can leave a comment
-- One user can not edit och delete another ones comment
+- One user can not edit or delete another ones comment
 - Users can not see unapproved comments except for their own
 - Admin gets collaborations requests as expected
 - Admin can approve or delete comments
 - Admin can create and delete a teacher profile
+- Draft lessons don't show on the website
 - By deleting a lesson, the comment deletes with the lesson
 - By deleting a teacher all the lessons are being deleted
 - Log in and register pages check for valid passwords
 - User can not send a collaboration request without name or email or text
 - Users can not leave a empty comment
+
+![Collaboration Request](static/media/collaboration-request.png)
+
+![Empty Comment](static/media/empty-comment.png)
+
+## Validating Code
+
+
+## Lighthouse
+
+## Deployment
+
+The code has been deployed on the early stages of the project. Deployment steps has been followed from Django Blog project.
+
+The variables has been added in Heroku as expected
+
+![Github Deployment](static/media/deployment.png)
+
+![Heroku](static/media/heroku.png)
+
+## Credits
+
+The website has been made with help of Django Blog project. About model, collaboration models and comment models
+are taken from blog project. JS file has been taken from blog project and adapted to serve BrainOn project.
+Most of the help for planning the project has been taken from [Django Recepie Sharing tutorial by Dee Mc](https://www.youtube.com/watch?v=_GNvmwvvS70&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=24).
+Some help for coding has been taken from [Python Django tutorial](https://www.youtube.com/watch?v=kmeEIJE7JDU).
+
+For designing the UI has been used Marvelapp.com
+The pictures has been downloaded from free sourse [Pixaby](https://pixabay.com/)
