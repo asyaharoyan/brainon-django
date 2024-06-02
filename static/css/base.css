@@ -106,6 +106,10 @@ form p textarea {
     border-color: var(--blue);   
 }
 
+.hide {
+    display: none;
+}
+
 /* Footer */
 footer {
     flex-shrink: 0;
