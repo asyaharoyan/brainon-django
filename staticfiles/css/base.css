@@ -54,6 +54,10 @@ main {
     border-color: var(--dark-blue);
 }
 
+.btn-primary {
+    margin: 1rem;
+}
+
 .link {
     text-decoration: none;
     color: var(--black);
@@ -63,6 +67,43 @@ main {
 .lesson-video {
     width: 80%;
     height: auto;
+}
+
+.comment-date {
+    font-size: .8rem;
+}
+
+.comments {
+    font-size: 1rem;
+}
+
+.approval {
+    font-size: .8rem;
+    font-style: italic;
+}
+
+.faded {
+    color: gray;
+}
+
+form ul {
+    list-style-type: none;
+
+}
+
+form p label {
+    display: block;
+    margin-bottom: .3rem;
+}
+
+form p input[type="text"],
+form p input[type="email"],
+form p input[type="password"],
+form p textarea {
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 10px;
+    border-color: var(--blue);   
 }
 
 /* Footer */
@@ -95,6 +136,14 @@ footer a {
 
 @media screen and (min-width: 767px) {
 
+    form p input[type="text"],
+    form p input[type="email"],
+    form p input[type="password"],
+    form p textarea {
+        width: 50%;
+        height: 3rem; 
+    }
+
     .lesson-video {
         width: 70%;
     }
@@ -111,6 +160,14 @@ footer a {
 }
 
 @media screen and (min-width: 992px) {
+
+    form p input[type="text"],
+    form p input[type="email"],
+    form p input[type="password"],
+    form p textarea {
+        width: 30%;
+        height: 3.5rem; 
+    }
 
     .lesson-video {
         width: 60%;

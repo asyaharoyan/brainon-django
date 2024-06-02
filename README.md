@@ -241,6 +241,29 @@ Several manual tests has been done on both computer and mobile devices.
 
 ## Validating Code
 
+- Validating templates
+Home page 
+![Home](static/media/home-app-valid.png)
+
+About page
+- Error
+![About page error](static/media/about-error.png)
+
+- Validated
+![About page valid](static/media/about-page-valid.png)
+
+Online lessons
+![Online lessons valid](static/media/online-lessons-valid.png)
+
+Lesson details
+- Error
+![Lesson detail error](static/media/lesson-detail-nonvalid.png)
+
+-Validated
+![Lesson detail valid](static/media/lesson-detail.valid.png)
+
+Log in
+![Log out valid](static/media/logout-valid.png)
 
 ## Lighthouse
 
