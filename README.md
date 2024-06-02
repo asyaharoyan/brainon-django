@@ -190,33 +190,73 @@ Several manual tests has been done on both computer and mobile devices.
 - All the social media links are opening in a new tab
 - All the buttons are reacting as it is expected
 - It is possible to send a collaboration request
+
+![Collaboration Request](static/media/collaboration-request.png)
+
+- It is not possible to send collaboration request without e-mail, name or a message
+
+![Empty Comment](static/media/empty-comment.png)
+
 - It is possible to register a new account on both mobile devices and computers
+ The user Nare and JS has registered and left comments from a mobile while asya
+ has registered from a laptop
+
 - It is possible to log in
+- Logged in user can leave a comment
+- Users can not see unapproved comments except for their own
+- One user can not edit or delete another ones comment
 - Edit comment/Delete comment buttons are working as expected
+
+![Edit Delete comment](static/media/delete-btn.png)
+
+- Users can not leave a empty comment
+
+![Empty comment](static/media/empty-comment.png)
+
 - All the menu buttons are leading to the pages as expected
 - Not authorized user can not see online lessons as expected
 - Logged in user sees different buttons accordingly
-- Logged in user can leave a comment
-- One user can not edit or delete another ones comment
-- Users can not see unapproved comments except for their own
+
+![Not logged in user](static/media/sing-in.png)
+
+![Logged in user](static/media/watch-online-lessons.png)
+
 - Admin gets collaborations requests as expected
+
+![Collaboration Request](static/media/collaboration-requests.png)
+
 - Admin can approve or delete comments
-- Admin can create and delete a teacher profile
+
+![Approve comment](static/media/approve-delete.png)
+
+- Admin can create and delete a teacher/courses profile
+
+![Delete Courses](static/media/delete-courses.png)
+
 - Draft lessons don't show on the website
 - By deleting a lesson, the comment deletes with the lesson
 - By deleting a teacher all the lessons are being deleted
 - Log in and register pages check for valid passwords
-- User can not send a collaboration request without name or email or text
-- Users can not leave a empty comment
 
-![Collaboration Request](static/media/collaboration-request.png)
-
-![Empty Comment](static/media/empty-comment.png)
 
 ## Validating Code
 
 
 ## Lighthouse
+
+The website has been tested on Lighthouse to see the performance.
+
+Before resizing the pictures: 
+
+![Lighthouse](static/media/lighthouse1.png)
+
+After resizing the pictures.
+
+Mobile:
+![Lighthouse](static/media/lighthouse2.png)
+
+Computers:
+![Lighthouse](static/media/lighthouse3.png)
 
 ## Deployment
 
@@ -237,3 +277,5 @@ Some help for coding has been taken from [Python Django tutorial](https://www.yo
 
 For designing the UI has been used Marvelapp.com
 The pictures has been downloaded from free sourse [Pixaby](https://pixabay.com/)
+For resizing the pictures to shorten loadtime has been used [Imagesizer](https://imageresizer.com/)
+For favicon has been used [Faicon Generator](https://favicon.io/favicon-converter/)
