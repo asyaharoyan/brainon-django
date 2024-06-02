@@ -263,6 +263,14 @@ Lesson details
 ![Lesson detail valid](static/media/lesson-detail.valid.png)
 
 Log in
+-Error
+![Log in nonvalid](static/media/login-nonvalid.png)
+
+Register
+-Error
+![Register nonvalid](static/media/register-nonvalid.png)
+
+Log out
 ![Log out valid](static/media/logout-valid.png)
 
 ## Lighthouse
