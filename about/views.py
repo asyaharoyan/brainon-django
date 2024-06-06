@@ -19,8 +19,12 @@ def about(request):
         collaborate_form = CollaborateForm(data=request.POST)
         if collaborate_form.is_valid():
             collaborate_form.save()
-            messages.add_message(request, messages.SUCCESS, 
-            "Thank you for your request. I will contact you during 5 working days.")
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                "Thank you for your request. I will contact you during"
+                "5 working days."
+            )
 
     about = About.objects.all().order_by('-updated_on').first()
     collaborate_form = CollaborateForm()
@@ -31,5 +35,5 @@ def about(request):
         {
             "about": about,
             "collaborate_form": collaborate_form
-            },
+        },
     )

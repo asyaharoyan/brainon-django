@@ -259,19 +259,54 @@ Lesson details
 - Error
 ![Lesson detail error](static/media/lesson-detail-nonvalid.png)
 
--Validated
+- Validated
 ![Lesson detail valid](static/media/lesson-detail.valid.png)
 
 Log in
--Error
+- Error
 ![Log in nonvalid](static/media/login-nonvalid.png)
 
+- Validated
+Has changed the version of allauth
+![Log in validated](static/media/login-valid.png)
+
 Register
--Error
+- Error
 ![Register nonvalid](static/media/register-nonvalid.png)
 
+- Validated
+Has changed the version of allauth
+![Log in validated](static/media/login-valid.png)
+
 Log out
-![Log out valid](static/media/logout-valid.png)
+![Register valid](static/media/register-valid.png)
+
+
+All the CSS validation has passed through without any errors
+
+![CSS home](static/media/css-home.png)
+
+![CSS about](static/media/css-about.png)
+
+![CSS courses not logged in](static/media/css-courses-nonauth.png)
+
+![CSS courses](static/media/css-courses-auth.png)
+
+![CSS login](static/media/css-login.png)
+
+![CSS logout](static/media/css-logout.png)
+
+![CSS register](static/media/css-register.png)
+
+About App has been validated without errors
+
+![Admin](static/media/admin-about.png)
+
+![Forms](static/media/form-about.png)
+
+![Models](static/media/models-about.png)
+
+![Views](static/media/views-about.png)
 
 ## Lighthouse
 
