@@ -308,6 +308,16 @@ About App has been validated without errors
 
 ![Views](static/media/views-about.png)
 
+Courses App has been validated without errors
+
+![Admin](static/media/admin-courses.png)
+
+![Forms](static/media/forms-courses.png)
+
+![Models](static/media/models-courses.png)
+
+![Views](static/media/views-courses.png)
+
 ## Lighthouse
 
 The website has been tested on Lighthouse to see the performance.

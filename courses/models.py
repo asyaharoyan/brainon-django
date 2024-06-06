@@ -7,6 +7,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
 
+
 class Course(models.Model):
     """
     Stores a teacher information registered by admin.
@@ -26,7 +27,11 @@ class Course(models.Model):
     DEFAULT_SUBJECT = PHYSICS
 
     teacher = models.CharField(max_length=200, unique=True)
-    course_subject = models.CharField(max_length=20, choices=SUBJECT_CHOICES, default=DEFAULT_SUBJECT)
+    course_subject = models.CharField(
+        max_length=20,
+        choices=SUBJECT_CHOICES,
+        default=DEFAULT_SUBJECT
+        )
 
     class Meta:
         ordering = ["-teacher"]
@@ -39,7 +44,7 @@ class Lesson(models.Model):
     """
     Stores a online lesson registered by admin
     """
-    
+
     title = models.CharField(max_length=100, unique=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     description = models.TextField()

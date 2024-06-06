@@ -8,6 +8,7 @@ from .forms import CommentForm
 
 # Create your views here.
 
+
 class LessonList(ListView):
     """
     Renders all the lessons published by admin
@@ -40,7 +41,7 @@ def course_detail(request, slug):
     lesson = get_object_or_404(queryset, slug=slug)
     comments = lesson.comments.all().order_by("-created_on")
     comment_count = lesson.comments.filter(approved=True).count()
-    
+
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -66,6 +67,7 @@ def course_detail(request, slug):
             },
     )
 
+
 def comment_edit(request, slug, comment_id):
     """
     View to edit comments
@@ -84,9 +86,14 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request,
+                messages.ERROR,
+                'Error updating comment!'
+                )
 
     return HttpResponseRedirect(reverse('course_detail', args=[slug]))
+
 
 def comment_delete(request, slug, comment_id):
     """
@@ -100,6 +107,7 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('course_detail', args=[slug]))
