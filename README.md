@@ -82,7 +82,7 @@ When the device is smaller the menu is moved to the side as a small burger butto
 The home page has been designed to give some information and motivate young learners to register and be a part of fun learning
 experience.
 It gives reasons why to sign up as it has been requested in user stories.
-It is expected to extend this part of the project adding search and filter when the users are on online lessons page.
+It is expected to extend this part of the project by adding a search and filter when the users are on the online lessons page.
 
 ### About Page
 
@@ -114,7 +114,7 @@ interesting.
 
 ![Next/Prev Buttons](static/media/next-btn.png)
 
-Next and Preview buttons appear as needed depending on which page the user is and if there is a next or preview page.
+Next and Preview buttons appear as needed depending on which page the user is on and if there is a next or preview page.
 
 ### Comment Form
 
@@ -131,30 +131,30 @@ else's comment.
 
 ![Register Form](static/media/sign-up-form.png)
 
-Register form has been taken from django's standard library. It has been styled and adapted the design of the website.
+The register form has been taken from Django's standard library. It has been styled and adapted to the design of the website.
 
 ### Log Out Form
 
 ![Log Out Form](static/media/login-form.png)
 
-Log out form, as register form has been taken from django's standard library. It has been styled and adapted the 
+Log out form, as a register form has been taken from Django's standard library. It has been styled and adapted to the 
 design of the website.
 
 ### Footer
 
 ![Footer](static/media/footer.png)
 
-Footer includes the links to the social media and each page opens in a new window as a good UX.
+The footer includes the links to the social media and each page opens in a new window as a good UX.
 
 ### Admin Panel
 
 ![Admin Panel](static/media/admin-panel.png)
 
-The admin panel has access to see, approve comments, to create a teacher profile and lessons.
+The admin panel has access to see, and approve comments, to create a teacher profile and lessons.
 
 ![Collaboration Requests](static/media/collaboration-requests.png)
 
-From admin panel the user can see the requests and which ones are already read.
+From the admin panel, the user can see the requests and which ones are already read.
 
 ![Comments Approval](static/media/comments-approval.png)
 
@@ -162,7 +162,7 @@ Admin can approve or delete the comments which are not appropriate.
 
 ## 404 page
 
-The website has a custom 404 page which has been designed to lead the user back to home page.
+The website has a custom 404 page which has been designed to lead the user back to the home page.
 
 ![404 page](static/media/404-page.png)
 
@@ -171,11 +171,11 @@ The website has a custom 404 page which has been designed to lead the user back 
 - Error has been shown while deploying the project.
 - Added env.py file to fix it.
 
-- Error has been shown when uploading the pictures from admin panel.
-- The error has been fixed b adding cloudinary link.
+- Error has been shown when uploading the pictures from the admin panel.
+- The error has been fixed by adding a Cloudinary link.
 
 - Edit and delete buttons did not work properly.
-- Fixed the bug by console logging. The ID of the comment was not beeing taken. Fixed the error.
+- Fixed the bug by console logging. The ID of the comment was not being taken. Fixed the error.
 
 ### Unfixed Errors
 
@@ -189,9 +189,9 @@ The website has a custom 404 page which has been designed to lead the user back 
 
 ## Manual Testing
 
-The web-site has been tested on Google Chrome, Mozilla, Google Egde on both bigger screens and mobile phone.
-The content is loading on all webbrowsers.
-Several manual tests has been done on both computer and mobile devices. 
+The website has been tested on Google Chrome, Mozilla, and Google Edge on both bigger screens and mobile phone.
+The content is loading on all web browsers.
+Several manual tests have been done on both computer and mobile devices. 
 
 - All the social media links are opening in a new tab
 - All the buttons are reacting as it is expected
@@ -199,35 +199,35 @@ Several manual tests has been done on both computer and mobile devices.
 
 ![Collaboration Request](static/media/collaboration-request.png)
 
-- It is not possible to send collaboration request without e-mail, name or a message
+- It is not possible to send a collaboration request without e-mail, name or a message
 
 ![Empty Comment](static/media/empty-comment.png)
 
 - It is possible to register a new account on both mobile devices and computers
- The user Nare and JS has registered and left comments from a mobile while asya
+ The users Nare and JS have registered and left comments from mobile while asya
  has registered from a laptop
 
 - It is possible to log in
-- Logged in user can leave a comment
+- Logged-user can leave a comment
 - Users can not see unapproved comments except for their own
-- One user can not edit or delete another ones comment
+- One user can not edit or delete another one's comment
 - Edit comment/Delete comment buttons are working as expected
 
 ![Edit Delete comment](static/media/delete-btn.png)
 
-- Users can not leave a empty comment
+- Users can not leave an empty comment
 
 ![Empty comment](static/media/empty-comment.png)
 
 - All the menu buttons are leading to the pages as expected
-- Not authorized user can not see online lessons as expected
-- Logged in user sees different buttons accordingly
+- Not authorized users can not see online lessons as expected
+- Logged-user sees different buttons accordingly
 
 ![Not logged in user](static/media/sing-in.png)
 
 ![Logged in user](static/media/watch-online-lessons.png)
 
-- Admin gets collaborations requests as expected
+- Admin gets collaboration requests as expected
 
 ![Collaboration Request](static/media/collaboration-requests.png)
 
@@ -235,13 +235,13 @@ Several manual tests has been done on both computer and mobile devices.
 
 ![Approve comment](static/media/approve-delete.png)
 
-- Admin can create and delete a teacher/courses profile
+- Admin can create and delete a teacher/course profile
 
 ![Delete Courses](static/media/delete-courses.png)
 
 - Draft lessons don't show on the website
 - By deleting a lesson, the comment deletes with the lesson
-- By deleting a teacher all the lessons are being deleted
+- By deleting a teacher all the lessons are deleted
 - Log in and register pages check for valid passwords
 
 
@@ -258,7 +258,7 @@ About page
 - Validated
 ![About page valid](static/media/about-page-valid.png)
 
-Online lessons
+Online Lessons
 ![Online lessons valid](static/media/online-lessons-valid.png)
 
 Lesson details
@@ -273,7 +273,7 @@ Log in
 ![Log in nonvalid](static/media/login-nonvalid.png)
 
 - Validated
-Has changed the version of allauth
+Has changed the version of all auth
 ![Log in validated](static/media/login-valid.png)
 
 Register
@@ -281,7 +281,7 @@ Register
 ![Register nonvalid](static/media/register-nonvalid.png)
 
 - Validated
-Has changed the version of allauth
+Has changed the version of all auth
 ![Log in validated](static/media/login-valid.png)
 
 Log out
@@ -324,7 +324,7 @@ Courses App has been validated without errors
 
 ![Views](static/media/views-courses.png)
 
-Settings file has been validated woithout any errors
+The settings file has been validated without any errors
 
 ![Settings](static/media/settings-main.png)
 
@@ -346,9 +346,9 @@ Computers:
 
 ## Deployment
 
-The code has been deployed on the early stages of the project. Deployment steps has been followed from Django Blog project.
+The code has been deployed in the early stages of the project. Deployment steps have been followed from the Django Blog project.
 
-The variables has been added in Heroku as expected
+The variables have been added in Heroku as expected
 
 ![Github Deployment](static/media/deployment.png)
 
@@ -356,12 +356,13 @@ The variables has been added in Heroku as expected
 
 ## Credits
 
-The website has been made with help of Django Blog project. About model, collaboration models and comment models
-are taken from blog project. JS file has been taken from blog project and adapted to serve BrainOn project.
-Most of the help for planning the project has been taken from [Django Recepie Sharing tutorial by Dee Mc](https://www.youtube.com/watch?v=_GNvmwvvS70&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=24).
+The website has been made with the help of the Django Blog project. About model, collaboration models and comment models
+are taken from the blog project. JS file has been taken from the blog project and adapted to serve the BrainOn project.
+Most of the help for planning the project has been taken from [Django Recipe Sharing tutorial by Dee Mc](https://www.youtube.com/watch?v=_GNvmwvvS70&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=24).
 Some help for coding has been taken from [Python Django tutorial](https://www.youtube.com/watch?v=kmeEIJE7JDU).
 
-For designing the UI has been used Marvelapp.com
-The pictures has been downloaded from free sourse [Pixaby](https://pixabay.com/)
-For resizing the pictures to shorten loadtime has been used [Imagesizer](https://imageresizer.com/)
+Designing the UI has been used Marvelapp.com
+The pictures have been downloaded from the free source [Pixaby](https://pixabay.com/)
+For resizing the pictures to shorten load time has been used [Imagesizer](https://imageresizer.com/)
 For favicon has been used [Faicon Generator](https://favicon.io/favicon-converter/)
+How to create 404 page [404 page in django](https://www.makeuseof.com/create-custom-404-error-page-django/)
