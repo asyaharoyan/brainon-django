@@ -13,11 +13,11 @@ class LessonList(ListView):
     """
     Renders all the lessons published by admin
     **Context**
-    queryset
+    ``queryset``
       All published instances of :model:class.Lesson
-    paginate_by
+    ``paginate_by``
       Number of posts per page
-    **Templates**
+    **Template**
     :templates:courses/online_courses.html
     """
     queryset = Lesson.objects.filter(status=1)
@@ -28,11 +28,11 @@ class LessonList(ListView):
 
 def course_detail(request, slug):
     """
-    Display an individual :model:course.Lesson.
+    Display an individual :model:`course.Lesson`.
 
     **Context**
-    Lesson
-        An instance of :model:course.Lesson.
+    ``Lesson``
+        An instance of :model:`course.Lesson`.
     **Template:**
     :template:courses/course_detail.html
     """
@@ -70,7 +70,15 @@ def course_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    View to edit comments
+    Display an individual comment for edit.
+
+    **Context**
+    ``lesson``
+        An instance of :model:`course.Lesson`.
+    ``comment``
+        A single comment related to the lesson.
+    ``comment_form``
+        An instance of :form:`course.CommentForm`
     """
     if request.method == "POST":
 
@@ -97,7 +105,15 @@ def comment_edit(request, slug, comment_id):
 
 def comment_delete(request, slug, comment_id):
     """
-    Delete an individual comment.
+    Display an individual comment for delete.
+
+    **Context**
+    ``lesson``
+        An instance of :model:`course.Lesson`.
+    ``comment``
+        A single comment related to the lesson.
+    ``comment_form``
+        An instance of :form:`course.CommentForm`
     """
     queryset = Lesson.objects.filter(status=1)
     lesson = get_object_or_404(queryset, slug=slug)

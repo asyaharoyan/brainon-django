@@ -10,7 +10,8 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Course(models.Model):
     """
-    Stores a teacher information registered by admin.
+    Stores a teacher and course information
+    registered by admin.
     """
 
     PHYSICS = 'Physics'
@@ -43,6 +44,7 @@ class Course(models.Model):
 class Lesson(models.Model):
     """
     Stores a online lesson registered by admin
+    related to :model:`course:Course`
     """
 
     title = models.CharField(max_length=100, unique=True)
@@ -63,6 +65,7 @@ class Lesson(models.Model):
 class Comment(models.Model):
     """
     Stores a comment written by auth user
+    related to :model:`auth:User` and :model:`course:Lesson`
     """
     course = models.ForeignKey(
         Lesson, on_delete=models.CASCADE, related_name='comments')

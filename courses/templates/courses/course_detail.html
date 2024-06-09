@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h1>{{ lesson.title }}</h1>
-                <p>{{ lesson.course.teacher }} | {{ lesson.created_on }}</p>
+                <article>{{ lesson.course.teacher }} | {{ lesson.created_on }}</article>
             </div>
             <div class="col-sm-12 text-center">
                 {% if "placeholder" in lesson.video_lesson.url %}

@@ -30,7 +30,7 @@ The logo has been designed by me, using CorelDraw.
 
 - Provide a filter to make it easy to find lessons
 - Provide a search form to find a specific lesson or teacher's videos
-- Have one shorter video lesson for everyone who has not signed up yet to attract more users
+- Have one shorter video(teaser) lesson for everyone who has not signed up yet to attract more users
 - Provide actual videos instead of pictures
 - Provide 2 sign-up methods for teachers and students
 - Give teachers access to upload their videos
@@ -159,6 +159,12 @@ From admin panel the user can see the requests and which ones are already read.
 ![Comments Approval](static/media/comments-approval.png)
 
 Admin can approve or delete the comments which are not appropriate.
+
+## 404 page
+
+The website has a custom 404 page which has been designed to lead the user back to home page.
+
+![404 page](static/media/404-page.png)
 
 ## Debugging
 
@@ -317,6 +323,10 @@ Courses App has been validated without errors
 ![Models](static/media/models-courses.png)
 
 ![Views](static/media/views-courses.png)
+
+Settings file has been validated woithout any errors
+
+![Settings](static/media/settings-main.png)
 
 ## Lighthouse
 
