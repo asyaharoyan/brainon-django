@@ -24,7 +24,7 @@ The logo has been designed by me, using CorelDraw.
 - For new users, the first page includes full information about the website
 - For the new users there is clear guidance on how to sign up and why
 - For admin, there is a designed UX to read requests, answer them
-- For the admin, there is a chance to approve och disapprove the comments
+- For the admin, there is a chance to approve or disapprove the comments
 
 ### Future development
 
@@ -37,8 +37,8 @@ The logo has been designed by me, using CorelDraw.
 
 ## Designing The Models
 
-The project and the models has been designed by the help of Blog walkthrough project. As it is recommended the models 
-was designed on a paper to get some overview how it will look like. During the development some names had been changed.
+The project and the models have been designed with the help of the Blog walkthrough project. As it is recommended the models 
+were designed on a paper to get some overview of what it will look like. During the development, some names had been changed.
 
 ![Courses Form](static/media/form-courses.jpg)
 
@@ -88,7 +88,7 @@ It is expected to extend this part of the project by adding a search and filter 
 
 ![Header mobiles](static/media/about-page.png)
 
-On the about page, the user gets to know about BrainON. It is more useful for the teachers who want to collaborate.
+On the About page, the user gets to know about BrainON. It is more useful for the teachers who want to collaborate.
 The short introduction leads the teachers to send an e-mail to the admin to share their videos.
 
 ### Collaboration form
@@ -120,7 +120,7 @@ Next and Preview buttons appear as needed depending on which page the user is on
 
 ![Comment Form](static/media/comments-form.png)
 
-The comment form can be used only by registered users. The user has the possibility to change or delete their own comments.
+The comment form can be used only by registered users. The user can change or delete their comments.
 When a user leaves a comment there is a clear message which pops up to inform the user that the comment is awaiting 
 approval. After approval the user still can edit or delete the comment however the user can not see or edit someone 
 else's comment.
@@ -189,7 +189,7 @@ The website has a custom 404 page which has been designed to lead the user back 
 
 ## Manual Testing
 
-The website has been tested on Google Chrome, Mozilla, and Google Edge on both bigger screens and mobile phone.
+The website has been tested on Google Chrome, Mozilla, and Google Edge on both bigger screens and mobile phones.
 The content is loading on all web browsers.
 Several manual tests have been done on both computer and mobile devices. 
 
@@ -356,7 +356,7 @@ The variables have been added in Heroku as expected
 
 ## Credits
 
-The website has been made with the help of the Django Blog project. About model, collaboration models and comment models
+The website has been made with the help of the Django Blog project. The About model, Collaboration models and Comment models
 are taken from the blog project. JS file has been taken from the blog project and adapted to serve the BrainOn project.
 Most of the help for planning the project has been taken from [Django Recipe Sharing tutorial by Dee Mc](https://www.youtube.com/watch?v=_GNvmwvvS70&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=24).
 Some help for coding has been taken from [Python Django tutorial](https://www.youtube.com/watch?v=kmeEIJE7JDU).
