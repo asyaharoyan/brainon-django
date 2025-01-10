@@ -35,14 +35,32 @@ The logo has been designed by me, using CorelDraw.
 - Provide 2 sign-up methods for teachers and students
 - Give teachers access to upload their videos
 
-## Designing The Models
+## Entity Relationship Diagram
 
-The project and the models have been designed with the help of the Blog walkthrough project. As it is recommended the models 
-were designed on a paper to get some overview of what it will look like. During the development, some names had been changed.
+To visualize the connections between the models in the BrainOn app, I have created a relationships diagram. This diagram provides a clear representation of how the models interact with each other.
 
-![Courses Form](static/media/form-courses.jpg)
+![Entity Relationship Diagram](static/media/diagram.png)
 
-![Courses Form](static/media/form-comment.jpg)
+## Models
+
+The project and the models have been designed with the help of the Blog walkthrough project. 
+
+- About model
+
+![About Model](static/media/about-model.png)
+
+- Course model
+
+![Course Model](static/media/course-model.png)
+
+- Lesson model
+
+![Lesson Model](static/media/lesson-model.png)
+
+- Comment model
+
+![Comment Model](static/media/comment-model.png)
+
 
 ## Designing The UI
 
@@ -61,6 +79,18 @@ In this stage, the colours have not been decided so it has been chosen grey as a
 
 ![Signup form](static/media/design-signup.png)
 
+## Typography
+
+The fonts chosen were 'Karla' for headings and 'Quicksand' for the rest of the app. As a fall back has been choosen standars 'serif' in case the choosen font does not load.
+It has been used different font-weights and font-sizes to give clearity.
+
+## Color Scheme
+
+The app's color scheme primarily features black, white, gray, and subtle light shades. This minimalistic palette ensures the focus remains on the educational content, particularly the videos uploaded by the teachers.
+
+However, the welcome page introduces a touch of color—soft and not overly bright. This page is designed to be inviting and visually engaging, using interactive elements and images rather than being text-heavy. This thoughtful design approach creates a warm and approachable entry point for users while maintaining the app's overall clean and professional aesthetic.
+
+![Colors](static/media/colors.png)
 
 ## Features
 
@@ -346,13 +376,106 @@ Computers:
 
 ## Deployment
 
-The code has been deployed in the early stages of the project. Deployment steps have been followed from the Django Blog project.
+The project was deployed to **Heroku**. The deployment process is as follows:
 
-The variables have been added in Heroku as expected
+1. Create repository
 
-![Github Deployment](static/media/deployment.png)
+- Create a new **GitHub** repository from CI template and  click on Create repository from template.
+- Click 'Code' and then copy either the HTTPS or SSH link. I used SSH.
 
-![Heroku](static/media/heroku.png)
+![Copy URL](static/media/copy-url.png)
+
+- Open GitPod and paste the URL then click open workspace
+
+![Copy URL](static/media/open-gitpod.png)
+
+2. Installing Django and supporting libraries:
+
+- Now it's time to install Django and it's supporting libraries. In the terminal, type the following commands:
+
+        pip3 install Django~=4.2.1
+        pip3 install dj_database_url psycopg2
+        pip3 install dj3-cloudinary-storage
+
+- After you have successfully installed the above, type the following command:
+
+        pip3 freeze --local > requirements.txt
+
+- This will create a requirements.txt file as show below
+
+- Now we need to create our Django project and the applications. In the terminal type the following command:
+
+        django-admin startproject PROJ_NAME .
+        django-admin startapp APP_NAME .
+
+- You then need to add your application to the INSTALLED_APPS section in your settings.py as shown below
+
+![Installed APP](static/media/installed-app.png)
+
+- After creating models, type the following commands in the terminal:
+
+        python manage.py makemigrations
+        python manage.py migrate
+
+3. Create the Heroku app:
+
+- Navigate to your Heroku dashboard and create a new app with a unique name and choose your preferred region.
+
+![Step 1](static/media/heroku1.png)
+
+- Since we are in Heroku, navigate to your project settings and click 'Reveal Config Vars'. Add your Heroku config vars to your project as shown below
+
+        DISABLE_COLLECTSTATIC = 1 is a temporary step for the moment and it will be removed before deployment
+
+- Create a file named Procfile at the root directory of the project. In the Procfile, declare this is a web process followed by the command to execute your Django project.
+
+        web: gunicorn poject_name.wsgi
+
+- In settings.py file change DEBUG=True with DEBUG=False.
+
+- Also, in settings.py we need to append the Heroku hostname to the ALLOWED_HOSTS list.
+
+![Aloowed Hosts](static/media/allowed-hosts.png)
+
+- Back in code, create a new file called env.py and ensure this is added to your gitignore file. Copy the below code but change the variable content to your specific details.
+
+        import os
+
+        os.environ["DATABASE_URL"] = "Your PostgreSQL link"
+        os.environ["CLOUDINARY_URL"] = "Your PostgreSQL link"
+        os.environ["SECRET_KEY"] = "Your PostgreSQL link"
+
+- In settings.py, look for the line that says 'from pathlib import Path' and then insert the code below.
+
+![Settings Import](static/media/settings-import.png)
+
+- Replace the default random security key that Django provides with your SECRET_KEY that you created in your env.py file.
+
+![Secret Key](static/media/secret-key.png)
+
+- Now you can git add, commit and push changes.
+
+4. Deploying an app to Heroku:
+
+- Now, let's return to the Heroku dashboard, and in your app, click on the Deploy tab.
+
+![Deploy 1](static/media/deploy-heroku.png)
+
+- In the Deployment method section enable GitHub integration by clicking on Connect to GitHub.
+
+![Deploy 2](static/media/deploy-heroku1.png)
+
+- Start typing your project repo name into the search box and click Search. A list of repositories from your GitHub account should appear. Click on the GitHub repo you want to deploy from.
+
+![Deploy 3](static/media/deploy-heroku2.png)
+
+- Scroll to the bottom of the page and click Deploy Branch to start a manual deployment of the main branch.
+
+![Deploy 3](static/media/deploy-heroku3.png)
+
+- Click on Open app to view your deployed project.
+
+![Open App](static/media/open-app.png)
 
 ## Credits
 
