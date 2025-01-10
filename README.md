@@ -196,6 +196,34 @@ The website has a custom 404 page which has been designed to lead the user back 
 
 ![404 page](static/media/404-page.png)
 
+## Feedback for the users
+
+The app is desiged to give feedback to the users.
+
+- When the user tries to register and any fields are missing or the password does not match the criterias
+
+![Feedback 1](static/media/feedback1.png)
+
+- If the user provides wrong username or password
+
+![Feedback 2](static/media/feedback2.png)
+
+- When the user send a collaborations request
+
+![Feedback 3](static/media/feedback3.png)
+
+- When the user comments the lesson
+
+![Feedback 4](static/media/feedback4.png)
+
+- When the user edits the comment
+
+![Feedback 5](static/media/feedback5.png)
+
+- When the user delets the comment
+
+![Feedback 6](static/media/feedback6.png)
+
 ## Debugging
 
 - Error has been shown while deploying the project.
